@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="utf-8">
+        <title>Linear Table</title>
+        <link rel="stylesheet" href="./sources/css/main.css" type="text/css">
+    </head>
+    <body>
+        <div id="tree-canvas">
+            <div class="default-text">
+                <h1>Linear Table</h1>
+                <h2>2152871 Sean</h2>
+            </div>
+        </div>
+        <div id="sidebar">
+            <h1>Linear Table</h1>
+            <form action="#">
+                <label for="lang"></label>
+                <select name="tables" id="table">
+                  <option value="select">Select a Type</option>
+                  <option value="SingleList">Single-Linked-List</option>
+                  <option value="CircularList">Circular-Linked-List</option>
+                  <option value="DoubleList">Double-Linked-List</option>
+                </select>
+          </form>
+            <div id="tools">
+                <h2>Console</h2>
+                <section id="tools-init">
+                    <div title="初始化方式">
+                        <button id="btn-init-empty" onclick="btnListInit()">Blank Table</button>
+                        <button id="btn-init-random" onclick="btnListInit(true)">Random Table</button>
+                    </div>
+                </section>
+                <section id="tools-edit">
+                    <div title="操作的结点id">
+                        Pelase Enter The Index：<input id="input-id" type="number" min="0" placeholder="Please Enter ID">
+                    </div>
+                    <!-- <h3>以下输入仅在插入时有效</h3> -->
+                    <div title="插入的数据值">
+                        Please Enter The Value：<input id="input-data" placeholder="Please Enter Value">
+                    </div>
+                    <div title="添加/修改/删除">
+                        <button id="btn-edit-add" class="tri" onclick="btnListInsert()" disabled>ADD</button>
+                        <button id="btn-edit-modify" class="tri special" onclick="btnListModify()" disabled>CHANGE</button>
+                        <button id="btn-edit-del" class="tri" onclick="btnListDelete()" disabled>DELETE</button>
+                        <button id="btn-edit-find" class="tri special" onclick="btnListFind()" disabled>FIND</button>
+                    </div>
+                </section>
+                <section id="tools-show">
+					<div title="展示操作记录">
+						<div class="title">Log</div>
+						<textarea id="text-operations" readonly placeholder="We will present the operations here"></textarea>
+					</div>
+                </section>
+            </div>
+        </div>
+
+        <footer>
+            <script async src="./sources/js/viz.min.js"></script>
+            <script async src="./sources/js/svg-pan-zoom.min.js"></script>
+            <script defer src="./sources/js/linearTable.js"></script>
+            <script defer src="./sources/js/circularTable.js"></script>
+            <script defer src="./sources/js/doubleTable.js"></script>
+            <script defer src="./sources/js/main.js"></script>
+        </footer>
+    </body>
+</html>
